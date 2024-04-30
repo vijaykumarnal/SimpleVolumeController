@@ -1,0 +1,35 @@
+﻿<Window x:Class="SimpleVolumeController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleVolumeController"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Margin="-4,0,3.6,-7" Height="420" VerticalAlignment="Bottom">
+        <Slider HorizontalAlignment="Left" x:Name="Slider" Minimum ="0" Maximum ="80" TickFrequency = "8" Margin="278,0,0,200" 
+         TickPlacement = "BottomRight" ValueChanged = "Slider_ValueChanged" VerticalAlignment="bottom" Width="200" Height="18">
+            <Slider.Background>
+                <LinearGradientBrush EndPoint = "0.5,1" StartPoint = "0.5,0">
+                    <GradientStop Color = "Blue" Offset = "0" />
+                </LinearGradientBrush>
+            </Slider.Background>
+        </Slider>
+
+        <TextBlock x:Name ="txt1" HorizontalAlignment="Left" Margin="278,181,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt2" HorizontalAlignment="Left" Margin="300,181,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt3" HorizontalAlignment="Left" Margin="324,181,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt4" HorizontalAlignment="Left" Margin="348,181,0,0" TextWrapping="Wrap" Text="30" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt5" HorizontalAlignment="Left" Margin="371,181,0,0" TextWrapping="Wrap" Text="40" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt6" HorizontalAlignment="Left" Margin="394,181,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt7" HorizontalAlignment="Left" Margin="417,181,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt8" HorizontalAlignment="Left" Margin="440,181,0,0" TextWrapping="Wrap" Text="70" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+        <TextBlock x:Name ="txt9" HorizontalAlignment="Left" Margin="463,181,0,0" TextWrapping="Wrap" Text="80" VerticalAlignment="Top" RenderTransformOrigin="1.763,-8.054"/>
+
+        <TextBox HorizontalAlignment="Left" x:Name ="txt10" TextChanged="TextChangedEventHandler" Height="23" Margin="300,230,0,0" TextWrapping="Wrap" Text="{Binding SliderValue, Mode=TwoWay}" VerticalAlignment="Top" Width="30"/>
+        <GroupBox Header="Volume in dB" HorizontalAlignment="Left" Height="113" Margin="263,153,0,0" VerticalAlignment="Top" Width="227"/>
+        <CheckBox x:Name="Mod_CheckBox" IsChecked="True" Content="Modify Volume" HorizontalAlignment="Left" Margin="348,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.957,0.013" Height="23" Width="105"
+                  Checked="Mod_CheckBox_Checked" Unchecked="Mod_CheckBox_Unchecked"/>
+    </Grid>
+</Window>
